@@ -13,6 +13,10 @@ gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5'
+gem 'autoprefixer-rails', '10.2.5'
+gem 'font-awesome-sass', '~> 5.15'
+gem 'simple_form'
+gem 'rest-client'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

@@ -1,0 +1,9 @@
+<h1>My list</h1>
+<%= link_to "new list", new_list_path(@lists)%>
+
+<hr>
+<% @lists.each do |list|%>
+<h5><%= link_to list.name, list_path(list) %></h5>
+<%= link_to "edit", edit_list_path(list)%>
+<%= link_to "delete", list_path(list), method: :delete %>
+<% end %>
