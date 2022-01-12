@@ -1,9 +1,6 @@
 class BookmarksController < ApplicationController
   before_action :find_list, only: [ :new, :create ]
  
- def index
- @bookmarks = Bookmark.all
- end
 
   def new
     @bookmark = Bookmark.new
@@ -32,6 +29,6 @@ class BookmarksController < ApplicationController
   end
 
   def bookmark_params
-    params.require(:bookmark).permit(:comment)
+    params.require(:bookmark).permit(:comment, :movie_id, :list_id)
   end
 end

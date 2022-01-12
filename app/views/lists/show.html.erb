@@ -1,11 +1,62 @@
+<%# <div class="list-banner"> style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 1000, crop: :fill %>
+<div class="list-banner">
 <h1><%= @list.name %></h1>
+</div>
 
-<%= link_to "Bookmark", new_list_bookmark_path(@list)%>
-<hr>
+<button class="button-delete btn btn-danger">Delete the list</button>
+<%= link_to "", list_path(@list), method: :delete, id: "delete-link", class: "hidden" %>
 
-<% @list.bookmarks.each do |bookmark| %>
-<h2><%= bookmark.movie.title %></h2>
-<% end %>
+<div class="container">
+  <div class="card-show-title">
+    <h1>Movies 🎬</h1>
+  </div>
+    <div class="row cards-movie">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="col-6-sm">
+          <div class="card-movie">
 
+          <div class = "movie-container">
+          <div class="card-poster">
+              <%= image_tag bookmark.movie.poster_url, alt: "movie poster" %>
+          </div>
+          <div class ="wraped-description">
+          <div class="card-description">
+            <div class="card-title">
+              <h5><%= bookmark.movie.title %></h5>
+              <p> <%= bookmark.movie.rating %><%= "⭐️" * bookmark.movie.rating %></p>
+            </div>
+            <div class="card-overview">
+              <p> <%= bookmark.movie.overview %> </p>
+            </div>
+            <hr>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class = "review-container">
+      <p><strong>Review</strong></p>
+            <div class="card-review">
+              <p><%= bookmark.comment %></p>
+            <button class="delete-movie btn btn-danger">Delete</button>
+            <%= link_to "", list_bookmark_path(bookmark), method: :delete, id: "delete-link", class: "hidden" %>
+            </div>
+          </div>
+      <% end %>
+  </div>
 
-<%= link_to "back", lists_path(@lists)%>
+  <div class="row">
+      <div class="col-12">
+        <hr>
+        <div class="new-movie-form">
+         <h3>Add a new movie</h3>
+        <%= simple_form_for [ @list, @bookmark ] do |f| %>
+          <%= f.input :comment, placeholder: 'Add your comment' %>
+          <%# <%= f.input :rating, placeholder: 'Add your rating', collection: 1..5, id: "example"   %>
+          <%= f.association :movie, input_html: { class: 'select2' } %>
+          <%= f.submit "Add movie", class: "btn btn-primary" %>
+        <% end %>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.list-banner{
+  background-image: asset_url('movie_banner.jpeg');
+  background-position: top center;
+  background-size: cover;
+  min-height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+  margin:0;
+}
+
+.card-show-title{
+  margin-top:50px;
+}
+
+.card-review{
+  margin-bottom: 50px;
+}
+
+.new-movie-form{
+  margin-bottom: 50px;
+}
+
+.movie-container{
+  display:flex;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.review-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-container{
+  display: flex;
+  background-color: white;
+  img{
+    height: 100%;
+  }
+
+  .wraped-description{
+    padding: 40px;
+   margin-top: 15%;
+   h5{
+     margin-bottom: 20px;
+   }
+  }
+}
+
+.review-container{
+  margin: 30px;
+}
