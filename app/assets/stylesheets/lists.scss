@@ -1,13 +1,51 @@
 // Place all the styles related to the lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background: linear-gradient(to bottom, #000000,#000000, #000000,  #e74c3c);   
+}
+
+
+
 .list-container{
-  margin:70px;
+  margin-top:70px;
   h1{
-    margin-left:35px;
+    margin-left:40px;
+    color: white;
   }
 }
 
+
+
 .card{
-  margin:15px;
+  height: 200px;
+  width: 400px;
+  margin: 30px;
+  img{
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.white-text{
+  color: white;
+}
+
+p{
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+i{
+  color: transparent;
+}
+i:hover{
+  color: dimgrey;
 }

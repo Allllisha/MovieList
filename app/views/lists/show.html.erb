@@ -1,6 +1,7 @@
-<%# <div class="list-banner"> style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 1000, crop: :fill %>
+<%# <div class="list-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 1000, crop: :fill %>
 <div class="list-banner">
 <h1><%= @list.name %></h1>
+<%= link_to "Add Movie", new_list_bookmark_path(@list) %>
 </div>
 
 <button class="button-delete btn btn-danger">Delete the list</button>
@@ -23,7 +24,8 @@
           <div class="card-description">
             <div class="card-title">
               <h5><%= bookmark.movie.title %></h5>
-              <p> <%= bookmark.movie.rating %><%= "⭐️" * bookmark.movie.rating %></p>
+              <h6><%= bookmark.movie.rating %></h6>
+             <h6><%= "⭐️" * bookmark.movie.rating %><h6>
             </div>
             <div class="card-overview">
               <p> <%= bookmark.movie.overview %> </p>
@@ -38,8 +40,7 @@
       <p><strong>Review</strong></p>
             <div class="card-review">
               <p><%= bookmark.comment %></p>
-            <button class="delete-movie btn btn-danger">Delete</button>
-            <%= link_to "", list_bookmark_path(bookmark), method: :delete, id: "delete-link", class: "hidden" %>
+      <%= link_to "Delete", list_bookmark_path(bookmark), method: :delete, id: "delete-link", class: "delete-movie btn btn-danger" %>
             </div>
           </div>
       <% end %>
@@ -53,6 +54,7 @@
         <%= simple_form_for [ @list, @bookmark ] do |f| %>
           <%= f.input :comment, placeholder: 'Add your comment' %>
           <%# <%= f.input :rating, placeholder: 'Add your rating', collection: 1..5, id: "example"   %>
+          <%= f.association :list %>
           <%= f.association :movie, input_html: { class: 'select2' } %>
           <%= f.submit "Add movie", class: "btn btn-primary" %>
         <% end %>
