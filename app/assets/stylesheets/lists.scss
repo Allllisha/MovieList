@@ -38,14 +38,26 @@ body{
   color: white;
 }
 
+.white-text:hover{
+  color: white;
+}
+
 p{
   justify-content: flex-end;
   margin-bottom: 5px;
 }
 
-i{
+.fa-edit{
   color: transparent;
 }
-i:hover{
+.fa-trash-alt{
+  color: transparent;
+}
+
+.fa-edit:hover{
+  color: dimgrey;
+}
+
+.fa-trash-alt:hover{
   color: dimgrey;
 }

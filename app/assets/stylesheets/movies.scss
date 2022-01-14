@@ -1,0 +1,28 @@
+.movie-banner{
+  background-image: asset_url('movie_banner.jpeg');
+  background-position: top center;
+  background-size: cover;
+  min-height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+  margin:0;
+}
+
+
+.card-body{
+  display: flex;
+}
+
+.box-1 img{
+ height: 120px;
+
+}
+
+.box-1{
+  margin-right: 100px;
+}
+
+h1{
+  margin-bottom: 50px;
+}
