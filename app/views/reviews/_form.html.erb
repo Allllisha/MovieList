@@ -1,0 +1,6 @@
+<%= simple_form_for [list, @review] do |f| %>
+<%= f.association :list %>
+<%= f.input :content, placeholder: 'Add your comment' %>
+<%= f.input :rating, placeholder: 'Add your rating', collection: 1..5, id: "example"   %>
+<%= f.submit "Add review", class: "btn btn-primary" %>
+<% end %>

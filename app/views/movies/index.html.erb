@@ -1,5 +1,5 @@
 <div class="movie-banner">
-<h1>Search Movie</h1>
+<%= image_tag 'Cinema.png', :size => '400x300' %>
 <%= form_tag movies_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
@@ -17,6 +17,7 @@
   <div class ="box-1">
    <h5><%= movie.title %></h5>
    <p><%= "⭐️" *  movie.rating %></p>
+   <p><%= movie.date %></p>
    </div>
    <%= image_tag movie.poster_url, alt: "movie poster" %>
   </div>
