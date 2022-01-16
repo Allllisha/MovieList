@@ -1,17 +1,17 @@
-.list-banner{
-  background-image: asset_url('movie_banner.jpeg');
-  background-position: top center;
-  background-size: cover;
-  min-height: 100vh;
-  color: #eee;
-  text-align: center;
-  padding-top: 40vh;
-  margin:0;
-}
 
 .card-show-title{
   margin-top:50px;
   color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-category{
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 50vh;
 }
 
 .card-review{
@@ -85,7 +85,7 @@ background-color: white;
 }
 
 .part-b{
-  background-color: steelblue;
+  background-color: rgba(74, 244, 213, 0.324);
   h3{
     color: black;
   }

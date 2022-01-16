@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
-  background: linear-gradient(to bottom, #000000,#000000, #000000,  #e74c3c);   
+  background: linear-gradient(to bottom, #000000,#000000, #000000,  #955fcb,#f152ff);   
 }
 
 
@@ -15,16 +15,42 @@ body{
   }
 }
 
+.fav-container{
+  margin-top:20px;
+  h1{
+    margin-left:40px;
+    color: white;
+  }
+}
 
 
 .card{
   height: 200px;
   width: 400px;
-  margin: 30px;
+  margin-right:35px;
+  margin-left:45px;
+  margin-bottom: 30px;
+
   img{
     height: 100%;
     object-fit: cover;
   }
+}
+
+.owl-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: larger;
+}
+
+.owl-prev{
+  margin-right: 30px;
+}
+
+.owl-next{
+  margin-left: 30px;
 }
 
 .card-title{
@@ -60,4 +86,17 @@ p{
 
 .fa-trash-alt:hover{
   color: dimgrey;
+}
+
+.blink {
+	-webkit-animation: blink 1s ease-in-out infinite alternate;
+	animation: blink 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes blink {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }

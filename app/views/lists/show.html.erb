@@ -1,12 +1,13 @@
-<%# <div class="list-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 1000, crop: :fill %>
-<div class="list-banner">
+<div class ="card-category">
 <h1><%= @list.name %></h1>
-<%= link_to "Add Movie", new_list_bookmark_path(@list) %>
+<p><span id="banner-typed-text"></span>
 </div>
+
 
 <div class="container">
   <div class="card-show-title">
     <h1>Movies 🎬</h1>
+    <p><%= link_to "Add Movie", new_list_bookmark_path(@list), class: "btn btn-outline-dark" %></p>
   </div>
     <div class="row cards-movie">
       <% @list.bookmarks.each do |bookmark| %>
@@ -47,6 +48,7 @@
       <% @reviews.each do |review|%>
        <h3><%=  "⭐️" * review.rating %></h3>
       <h5><%= review.content %><h5>
+       <%= link_to "delete", review_path(review), method: :delete %>
       <hr>
        <% end %>
       </div>
@@ -55,6 +57,7 @@
          <h3>Review for list</h3>
           <%= simple_form_for [@list, @review] do |f| %>
 <%= f.input :content, placeholder: 'Add your comment' %>
+<%= f.association :list, input_html: { class: 'select2' } %>
 <select id="example">
   <option value="1">1</option>
   <option value="2">2</option>
@@ -62,8 +65,9 @@
   <option value="4">4</option>
   <option value="5">5</option>
 </select>
+
 <%= f.input :rating, placeholder: 'Add your rating', collection: 1..5, id: "example"   %>
-<%= f.submit "Add review", class: "btn btn-primary" %>
+<%= f.submit "Add review", class: "btn btn-outline-dark" %>
 <% end %>
         </div>
      </div>
@@ -76,7 +80,7 @@
          <%= simple_form_for [@list, @bookmark] do |f| %>
       <%= f.input :comment, placeholder: 'Add your comment' %>
       <%= f.association :movie, input_html: { class: 'select2' } %>
-      <%= f.submit "Add movie", class: "btn btn-primary" %>
+      <%= f.submit "Add movie", class: "btn btn-outline-dark" %>
       <% end %>
     </div>
   </div>

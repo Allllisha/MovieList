@@ -1,14 +1,16 @@
 <div class="movie-banner">
-<%= image_tag 'Cinema.png', :size => '400x300' %>
+<%= image_tag 'Cinema.png', :size => '400x400', class: "blink"%>
 <%= form_tag movies_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+<div class ="search-tag">
+  <%= text_field_tag :query,params[:query], class: "form-control", placeholder: "Find a movie"%><%= submit_tag "Search", class: "btn btn-outline-dark" %>
 <% end %>
 </div>
+</div>
+
+<div class="list-container">
+<h1>Movies 🎬</h1>
+</div>
+
 
 <div class="d-flex justify-content-around my-box-light flex-wrap mb-2">
 <% @movies.each do |movie| %>
@@ -24,3 +26,5 @@
 </div>
 <% end %>
 </div>
+
+

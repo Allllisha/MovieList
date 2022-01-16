@@ -12,3 +12,13 @@ const initUpdateNavbarOnScroll = () => {
 }
 
 export { initUpdateNavbarOnScroll };
+
+
+
+const removeNavberImg = () => {
+  const navbarImg = document.querySelector('.nav-item dropdown');
+  navbarImg.classList.remove('.nav-item dropdown');
+      
+};
+
+export { removeNavberImg };

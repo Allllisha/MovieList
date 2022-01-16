@@ -1,11 +1,17 @@
 .home-banner {
-  background-image: asset_url('movie_banner.jpeg');
   background-position: top center;
   background-size: cover;
   min-height: 100vh;
   color: #eee;
   text-align: center;
-  padding-top: 40vh;
+  padding-top: 30vh;
+  margin:0;
+}
+
+.form-banner {
+  min-height: 30vh;
+  color: #eee;
+  text-align: center;
   margin:0;
 }
 
