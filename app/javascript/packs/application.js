@@ -14,6 +14,7 @@ import 'bootstrap';
 //= require jquery_ujs
 //= require_tree .
 require('test.js')
+require('turn.js')
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
