@@ -67,14 +67,6 @@
           <%= simple_form_for [@list, @review] do |f| %>
 <%= f.input :content, placeholder: 'Add your comment' %>
 <%= f.association :list, input_html: { class: 'select2' } %>
-<select id="example">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
-
 <%= f.input :rating, placeholder: 'Add your rating', collection: 1..5, id: "example"   %>
 <%= f.submit "Add review", class: "btn btn-outline-dark" %>
 <% end %>
