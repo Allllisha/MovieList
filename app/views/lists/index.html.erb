@@ -1,16 +1,13 @@
 <div class = "home-banner">
-<%= image_tag 'move-save.png', :size => '500x300', class: "blink" %>
+<%= image_tag 'move-save.png', :size => '500x300' %>
 <p><span id="banner-typed-text"></span>
 </p>
 </div>
 
 <div class="list-container">
-<h1>All lists 🎬</h1>
+<h1>All list 🎬</h1>
 </div>
-
-
-<%# <div class="d-flex justify-content-around my-box-light flex-wrap mb-2"> %>
-<div class="owl-carousel">
+<div class="d-flex justify-content-around my-box-light flex-wrap mb-2">
 <% @lists.each do |list|%>
  <div class="card bg-dark text-white">
   <img class="card-img" <%= image_tag list.photo, :width => '100%', :height => '200px', class: "photo" %> 
@@ -30,14 +27,11 @@
 </div>
  <% end %>
  </div>
- </div>
  
- <div class="fav-container">
-<h1>My Favorite 🎬</h1>
+<div class="list-container">
+<h1>My list 🎬</h1>
 </div>
-
-
- <div class="owl-carousel">
+<div class="d-flex justify-content-around my-box-light flex-wrap mb-2">
 <% @favlists.each do |favlist|%>
  <div class="card bg-dark text-white">
   <img class="card-img" <%= image_tag favlist.photo, :width => '100%', :height => '200px', class: "photo" %> 
@@ -57,6 +51,8 @@
 </div>
  <% end %>
  </div>
- </div>
+ 
+
+ 
  
    
