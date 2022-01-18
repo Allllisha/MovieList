@@ -8,7 +8,7 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @bookmark = Bookmark.new
     @review = Review.new
-    @reviews = Review.all
+    @reviews = @list.reviews
   end
 
   def new
