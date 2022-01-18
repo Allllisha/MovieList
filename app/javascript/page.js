@@ -3,7 +3,7 @@
 $(function(){
   $('#flipbook').turn(
     　　　　　　　
-      {　　　　display:'single',
+      {　　　　display:'double',
               // 自動でページをめくったときの高さ
               elevation: 50,
             
@@ -20,7 +20,7 @@ $(function(){
               direction: 'ltr',
 
               width: 450,
-              height: 580,
+              height: 550,
              
               
       }
