@@ -5,7 +5,12 @@ body{
   background: linear-gradient(to bottom, #000000,#000000, #000000,  #955fcb,#ca3ad7,);   
 }
 
-
+.neon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
 
 .list-container{
   margin-top:70px;

@@ -14,13 +14,13 @@ $(function(){
               gradients: true,
 
               // 自動中央揃え->無効
-              autoCenter: false,
+              autoCenter: true,
 
               // 右開きか左開きかの設定->右開き
               direction: 'ltr',
 
-              width: 470,
-              height: 600,
+              width: 450,
+              height: 580,
              
               
       }
