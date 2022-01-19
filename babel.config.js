@@ -62,13 +62,6 @@ module.exports = function(api) {
         }
       ],
       [
-        '@babel/plugin-proposal-private-property-in-object',
-        {
-          loose: true
-        }
-      ],
-      
-      [
         '@babel/plugin-transform-regenerator',
         {
           async: false
