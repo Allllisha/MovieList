@@ -50,21 +50,6 @@ body{
   }
 }
 
-.owl-nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: larger;
-}
-
-.owl-prev{
-  margin-right: 30px;
-}
-
-.owl-next{
-  margin-left: 30px;
-}
 
 .card-title{
   display: flex;
@@ -87,10 +72,10 @@ p{
 }
 
 .fa-edit{
-  color: transparent;
+  color: #000000;
 }
 .fa-trash-alt{
-  color: transparent;
+  color: #000000;
 }
 
 .fa-edit:hover{
@@ -112,4 +97,18 @@ p{
 @keyframes blink {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
+}
+
+.carousel-item{
+  img{
+    object-fit: cover;
+  }
+}
+
+.card-img-overlay{
+  margin-top: 90px;
+}
+
+#carouselExampleIndicators{
+  margin-bottom: 50px;
 }
