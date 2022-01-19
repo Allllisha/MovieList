@@ -285,6 +285,7 @@ DEPENDENCIES
   byebug
   cloudinary (~> 1.16.0)
   dotenv-rails
+  elasticsearch (< 7.14)
   font-awesome-sass (~> 5.15)
   jbuilder (~> 2.7)
   jquery-rails
