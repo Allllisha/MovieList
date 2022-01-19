@@ -10,7 +10,6 @@ require("channels")
 require("jquery")
 // app/javascript/packs/application.js
 import 'bootstrap';
-import '../css/application.css'
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
