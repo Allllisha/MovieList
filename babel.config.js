@@ -62,7 +62,7 @@ module.exports = function(api) {
         }
       ],
       [
-        '@babel/plugin-proposal-private-methods',
+        '@babel/plugin-proposal-private-property-in-object',
         {
           loose: true
         }
