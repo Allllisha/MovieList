@@ -10,15 +10,12 @@ require("channels")
 require("jquery")
 // app/javascript/packs/application.js
 import 'bootstrap';
+import '../css/application.css'
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-require('turn.js')
-require('page.js')
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
-require('turn.js')
-require('carousel.js')
+
+
 
 
 
@@ -28,7 +25,7 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
-  initUpdateNavbarOnScroll();
+  initUpdateNavbarOnScroll()
   loadDynamicBannerText();
 });
 

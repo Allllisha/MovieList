@@ -15,10 +15,6 @@
 }
 
 
-.one{
-  background-image: asset_url('movie.jpeg');
-  object-fit: cover;
-}
 
 .list-title{
   display: flex;
@@ -27,18 +23,7 @@
   margin-top: 300px;
 }
 
-.two{
-  background-color: white;
-  img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-}
-.three{
-  background-color: white;
-}
+
 
 
 .delete-contaner{
@@ -59,15 +44,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50%;
-  margin-left: 10px;
-  margin-right: 10px;
+  background-image: asset_url('wood.jpeg');
+  background-size: 100%;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  width: 555px;
+
+  @media screen and (max-width: 767px) {
+  width: 100%;
+  background-image: asset_url('wood.jpeg');
+  border-radius: 4px;
+  }
+ 
+  h6{
+    margin:20px;
+  }
 }
 
-.five{
-  background-color: white;
-  background-position: center;
-}
 
 .new-movie-form{
   margin-bottom: 50px;
@@ -131,23 +124,79 @@ h3{
 }
 
 
+.show-container {
+  position: relative;
+  width: 50%;
+}
 
-.flipbook {
-  height: 100%;
-  transition: margin-left 0.25s ease-out;
-  width: 100%;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.image {
+  display: block;
+    width: 100%;
+    height: auto;
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
-.flipbook .page {
-  height: 100%;
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #c1cbcd79;
+  overflow: hidden;
   width: 100%;
+  height: 0;
+  transition: .5s ease;
 }
-.flipbook .page img {
-  max-width: 100%;
-  height: 100%;
+
+.container:hover .overlay {
+  height: 65%;
+  @media screen and (max-width: 767px) {
+    height: 68%;
+  }
+}
+
+.text-box {
+  color: rgb(23, 21, 21);
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    color: rgb(23, 21, 21);
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.row{
+  margin-top: 30px;
+}
+
+.flex-container{
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
