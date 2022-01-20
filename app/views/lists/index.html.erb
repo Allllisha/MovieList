@@ -23,12 +23,14 @@
          <%= image_tag list.photo, :width => '100%', :height => '400px', class: "carousel_image" %>
          <div class="card-img-overlay">
     <h3 class="card-title"><%= link_to list.name, list_path(list), class: "white-text" %></h3>
+    <p class="item">
     <%= link_to edit_list_path(list) do%>
       <i class="far fa-edit"></i>
       <% end %>
     <%= link_to list_path(list), method: :delete do%>
     <i class="fas fa-trash-alt"></i>
     <% end %>
+     </p>
   </div>
       <% end %>
     </div> 
@@ -41,8 +43,6 @@
     <%= link_to edit_list_path(list) do%>
       <i class="far fa-edit"></i>
       <% end %>
-    </p>
-    <p>
     <%= link_to list_path(list), method: :delete do%>
     <i class="fas fa-trash-alt"></i>
     <% end %>
@@ -86,8 +86,6 @@
     <%= link_to edit_list_path(favlist) do%>
       <i class="far fa-edit"></i>
       <% end %>
-    </p>
-    <p>
     <%= link_to list_path(favlist), method: :delete do%>
     <i class="fas fa-trash-alt"></i>
     <% end %>
@@ -104,8 +102,6 @@
     <%= link_to edit_list_path(favlist) do%>
       <i class="far fa-edit"></i>
       <% end %>
-    </p>
-    <p>
     <%= link_to list_path(favlist), method: :delete do%>
     <i class="fas fa-trash-alt"></i>
     <% end %>

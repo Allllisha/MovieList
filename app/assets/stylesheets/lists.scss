@@ -7,7 +7,6 @@ body{
 
 .neon{
   @media screen and (max-width: 767px) {
-    margin-right: 50px;
     width:430px;
     height:250px;
   }
@@ -72,10 +71,10 @@ p{
 }
 
 .fa-edit{
-  color: #000000;
+  color: transparent;
 }
 .fa-trash-alt{
-  color: #000000;
+  color: transparent;
 }
 
 .fa-edit:hover{
@@ -111,4 +110,10 @@ p{
 
 #carouselExampleIndicators{
   margin-bottom: 50px;
+}
+
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
