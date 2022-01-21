@@ -11,16 +11,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Home", lists_path(@lists), class: "nav-link "%>
+      <li class="nav-item">
+        <%= link_to "Search Movie", movies_path(@movies), class: "nav-link mr-3 btn btn-outline-dark"%>
       </li>
       <li class="nav-item">
-        <%= link_to "Search Movie", movies_path(@movies), class: "nav-link mr-0"%>
-      </li>
-      <li class="nav-item">
-        <%= link_to "All lists", lists_path(@lists), class: "nav-link mr-1"%>
-      </li>
-      <li class="nav-item">
-        <%= link_to "New lists", new_list_path(@list), class: "nav-link mr-1"%>
+        <%= link_to "New lists", new_list_path(@list), class: "nav-link mr-1 btn btn-outline-dark"%>
       </li>
 
       <li class="nav-item dropdown">

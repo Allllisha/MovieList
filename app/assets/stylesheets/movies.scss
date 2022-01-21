@@ -1,17 +1,20 @@
 .movie-banner{
-  background-image: asset_url('kino.jpg');
   background-position: top center;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 80vh;
   color: #eee;
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 30vh;
   margin:0;
-   img{
-     margin-top: 0;
-   }
 }
 
+.movie-wrapper{
+	background-image: asset_url("mesh.png"); /* 画像のパスを指定 */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
 
 .card-body{
   display: flex;
@@ -39,95 +42,71 @@ h1{
 }
 
 
-.grid {
-	padding: 20px 20px 100px 20px;
-	max-width: 1300px;
-	margin: 0 auto;
-	list-style: none;
-	text-align: center;
+.container-glass,
+.container-glass::before,
+.container-glass::after {
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.08);
+}
+.container-glass {
+  position: relative;
+  padding: 2rem 1.5rem;
+  width: 80%;
+  max-width: 280px;
+	margin-bottom: 50px;
+	margin: 30px;
+}
+.container-glass::before,
+.container-glass::after {
+  content: '';
+  position: absolute;
+}
+.container-glass::before {
+  height: 80px;
+  width: 80px;
+  top: -10px;
+  left: -40px;
+  z-index: -1;
+}
+.container-glass::after {
+  height: 40px;
+  width: 40px;
+  bottom: 20px;
+  right: -10px;
+  z-index: 2;
 }
 
-.grid li {
-	display: inline-block;
-	width: 440px;
-	margin: 0;
-	padding: 20px;
-	text-align: left;
-	position: relative;
+.container-glass .img {
+  width: 100%;
+  border-radius: 7px;
+	object-fit: cover;
 }
 
-.grid figure {
-	margin: 0;
-	position: relative;
+.container-glass .text {
+  font-size: 1.01rem;
+  color: #DDD;
+  margin: 2rem 0;
+  text-align: justify;
 }
 
-.grid figure img {
-	max-width: 100%;
-	display: block;
-	position: relative;
+.container-glass .btn {
+  display: block;
+  margin: auto;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.02rem;
+  width: 80%;
+  max-width: 200px;
+  padding: .6rem 1rem;
+  background-color: transparent;
+  border: 1px solid #ffdd00;
+  border-radius: 5px;
+  color: #ffdd00;
+  cursor: pointer;
+  transition: all .2s linear;
 }
-
-.grid figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 20px;
-	background: #2c3f52;
-	color: #ed4e6e;
-}
-
-.grid figcaption h3 {
-	margin: 0;
-	padding: 0;
-	color: #fff;
-}
-
-.grid figcaption span:before {
-	content: 'by ';
-}
-
-.grid figcaption a {
-	text-align: center;
-	padding: 5px 10px;
-	border-radius: 2px;
-	display: inline-block;
-	background: #ed4e6e;
-	color: #fff;
-}
-
-@media screen and (max-width: 31.5em) {
-	.grid {
-		padding: 10px 10px 100px 10px;
-	}
-	.grid li {
-		width: 100%;
-		min-width: 300px;
-	}
-}
-
-.cs-style-1 figcaption {
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	text-align: center;
-	backface-visibility: hidden;
-	transition: transform 0.3s, opacity 0.3s;
-}
-
-.no-touch .cs-style-1 figure:hover figcaption,
-.cs-style-1 figure.cs-hover figcaption {
-	opacity: 1;
-	transform: translate(15px, 15px);
-}
-
-.cs-style-1 figcaption h3 {
-	margin-top: 70px;
-}
-
-.cs-style-1 figcaption span {
-	display: block;
-}
-
-.cs-style-1 figcaption a {
-	margin-top: 30px;
+.container-glass .btn:hover {
+  background-color: #ffdd00;
+  color: #333;
 }

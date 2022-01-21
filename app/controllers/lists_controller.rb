@@ -1,4 +1,10 @@
 class ListsController < ApplicationController
+
+  def home
+    @lists = List.all
+  end
+
+
   def index 
     @lists = List.all
     @favlists = List.where('name LIKE ?', 'My%').all

@@ -10,9 +10,9 @@ require("channels")
 require("jquery")
 // app/javascript/packs/application.js
 import 'bootstrap';
-//= require jquery
-//= require jquery_ujs
 //= require_tree .
+// require("jquery-bar-rating")
+// require("jquery")
 
 
 

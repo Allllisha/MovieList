@@ -1,5 +1,6 @@
 <div class="movie-banner">
-<%= image_tag 'Cinema.png', :size => '400x400', class: "blink"%>
+
+<h2>Cinema</h2>
 <%= form_tag movies_path, method: :get do %>
 <div class ="search-tag">
   <%= text_field_tag :query,params[:query], class: "form-control", placeholder: "Find a movie"%><%= submit_tag "Search", class: "btn btn-outline-dark" %>
@@ -11,17 +12,16 @@
 <h1>Movies 🎬</h1>
 </div>
 
-<div class="d-flex justify-content-around my-box-light flex-wrap mb-2">
+<div class="movie-wrapper d-flex justify-content-around my-box-light flex-wrap mb-2">
 <% @movies.each do |movie| %>
-<div class="card">
-  <div class="card-body">
-   <%= image_tag movie.poster_url, alt: "movie poster" %>
-  <div class ="box-1">
-   <h5><%= movie.title %></h5>
-   <p><%= "⭐️" *  movie.rating %></p>
-   <p><%= movie.date %></p>
-   </div>
-  </div>
+<div class="container-glass">
+  <%= image_tag movie.poster_url, :width => '300px', :height => '200px', alt: "movie poster", class: "img" %>
+  <p class="text">
+    <h4><%= movie.title %></h4>
+    <p><%= "⭐️" *  movie.rating %></p>
+    <%= movie.date %>
+    <button class="btn">Discover</button>
+  </p>
 </div>
 <% end %>
 </div>

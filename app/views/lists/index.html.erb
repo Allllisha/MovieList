@@ -1,14 +1,20 @@
 <div class = "home-banner">
-<%= image_tag 'move-save.png', :size => '600x400', class: "neon blink" %>
-<p><span id="banner-typed-text"></span>
-</p>
+<div class = "hb-container">
+<h2>Movie</h2>
+<h2>Movie</h2>
+<h2>Movie</h2>
+</div>
+<p>Keep your favorite movies</p>
+<p>Share with your friends</p>
+</div>
 </div>
 
 
 <div class="list-container">
-<h1>All lists 🎬</h1>
+<h3>All lists</h3>
 </div>
 
+<div class ="car-container">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -20,7 +26,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active text-white">
       <% @lists.first(1).each do |list| %>
-         <%= image_tag list.photo, :width => '100%', :height => '400px', class: "carousel_image" %>
+         <%= image_tag list.photo,  :width => '100%', :height => '300px', class: "carousel_image" %>
          <div class="card-img-overlay">
     <h3 class="card-title"><%= link_to list.name, list_path(list), class: "white-text" %></h3>
     <p class="item">
@@ -36,7 +42,7 @@
     </div> 
     <% @lists.drop(1).each do |list| %>
       <div class="carousel-item text-white">
-    <%= image_tag list.photo, :width => '100%', :height => '400px', class: "carousel_image" %>
+    <%= image_tag list.photo, :width => '100%', :height => '300px', class: "carousel_image" %>
     <div class="card-img-overlay">
     <h3 class="card-title"><%= link_to list.name, list_path(list), class: "white-text" %></h3>
     <p class="item">
@@ -60,9 +66,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
- <div class = "footer">
-<%= image_tag 'pngegg.png'%>
  </div>
 
-
+<div class = "footer">
+<h1>Lorem ipsum dolor, sit amet●</h1>
+</div>
    
