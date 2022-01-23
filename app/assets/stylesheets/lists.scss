@@ -3,13 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-  background: rgb(255, 255, 255);
+  background-image: asset_url("1204651.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 
 .nav-link{
   color: #000000;
 }
 
+.my-box-light{
+margin-top: 50px;
+}
 
 h2{
   color: pink;
@@ -32,7 +39,11 @@ p{
   margin-bottom: 10px;
 }
 
-
+.hb-container{
+  h1{
+    font-family: q-font;
+  }
+}
 
 .list-container{
 margin-left: 30px;
@@ -52,15 +63,28 @@ h3{
 
 
 
+
 .card{
   margin-right:35px;
   margin-left:45px;
   margin-bottom: 30px;
+  width: 400px;
+  height: 300px;
 
   img{
-
+    height: 300px;
+    width: 400px;
     object-fit: cover;
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all .2s ease-in-out;  
   }
+  img:hover {
+    filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1.03);
+
+    }
 }
 
 
@@ -73,11 +97,14 @@ h3{
 
 .white-text{
   color: white;
+  font-family: q-font;
+  text-decoration: none;
 }
 
 .white-text:hover{
   color: white;
 }
+
 
 p{
   justify-content: flex-end;
@@ -106,11 +133,6 @@ p{
   flex-direction: column;
 }
 
-.carousel-item{
-  img{
-    object-fit: cover;
-  }
-}
 
 .card-img-overlay{
   margin-top: 90px;
@@ -139,7 +161,3 @@ p{
   }
 }
 
-.car-container{
-  margin-left: 100px;
-  margin-right: 100px;
-}

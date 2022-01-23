@@ -41,3 +41,8 @@ $headers-font: 'myfont', "cursive";
   src: asset_url('PPPangramSansRounded-SlimMediumReclined.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'q-font'; /* フォント名 */
+  /* フォーマットごとにパスを指定 */
+  src: asset_url('Qegor.ttf') format('truetype');
+}

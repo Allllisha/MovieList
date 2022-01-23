@@ -16,12 +16,12 @@ gem 'sass-rails', '~> 5'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.15'
 gem 'elasticsearch', "< 7.14"
+gem 'devise'
 gem 'searchkick', '~> 4.0'
 gem 'simple_form'
 gem 'rest-client'
 gem "select2-rails"
 gem 'cloudinary', '~> 1.16.0'
-gem 'jquery-rails'
 gem 'dotenv-rails', groups: [:development, :test]
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'react-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

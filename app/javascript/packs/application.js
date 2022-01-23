@@ -11,8 +11,7 @@ require("jquery")
 // app/javascript/packs/application.js
 import 'bootstrap';
 //= require_tree .
-// require("jquery-bar-rating")
-// require("jquery")
+
 
 
 
@@ -24,7 +23,7 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
-  initUpdateNavbarOnScroll()
+  initUpdateNavbarOnScroll();
   loadDynamicBannerText();
 });
 

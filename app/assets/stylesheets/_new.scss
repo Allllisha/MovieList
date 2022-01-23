@@ -1,11 +1,10 @@
 .form-container{
-  margin:100px;
+  margin:50px;
   color: #000;
 }
 
 .bg {
   padding-top: 30px;
-  background-image: asset_url("mesh.png"); /* 画像のパスを指定 */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,23 +18,23 @@
   }
 }
 
-/* ガラス本体 */
+
 .glass {
   width: 100%;
   max-width: 600px;
   padding: 30px;
-  background-color: rgba(255, 255, 255, 0.029); /* 背景色 */
-  border: 1px solid rgba(255, 255, 255, 0.4); /* ボーダー */
+  background-color: rgba(255, 255, 255, 0.029); 
+  border: 1px solid rgba(255, 255, 255, 0.4); 
   border-right-color: rgba(255, 255, 255, 0.043);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  -webkit-backdrop-filter: blur(20px); /* ぼかしエフェクト */
+  -webkit-backdrop-filter: blur(20px); 
   backdrop-filter: blur(20px);
-  box-shadow: 0 5px 20px rgba(255, 152, 79, 0.5); /* 薄い影 */
+  box-shadow: 0 5px 20px rgba(255, 152, 79, 0.5); 
  position: relative;
 }
 
-/* ガラス内の要素 */
+
 .glass h1 {
   text-align: center;
   color: rgba(255, 255, 255, 0.228);
