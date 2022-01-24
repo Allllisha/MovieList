@@ -10,7 +10,9 @@ require("channels")
 require("jquery")
 // app/javascript/packs/application.js
 import 'bootstrap';
-//= require_tree .
+require('./hello_react.jsx')
+require('./stylesheets/hello_react.css')
+
 
 
 
@@ -33,3 +35,7 @@ document.addEventListener('turbolinks:load', () => {
 
 
 
+// Support component names relative to this directory:
+var componentRequireContext = require.context("components", true);
+var ReactRailsUJS = require("react_ujs");
+ReactRailsUJS.useContext(componentRequireContext);

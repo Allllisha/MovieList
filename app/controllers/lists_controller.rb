@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
   def index 
-    @lists = List.all
+    @lists = List.all();
     @favlists = List.where('name LIKE ?', 'My%').all
   end
 
