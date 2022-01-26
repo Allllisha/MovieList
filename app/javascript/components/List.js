@@ -4,10 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 // import PropTypes from "prop-types"
 class List extends React.Component {
   render () {
+    const arr = this.props.data.map((x) => <li>{x.movie.poster_url}!</li>);
     return (
       <div className ="slidersbox">
       <Swiper>
-      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>{arr}</SwiperSlide>
       <SwiperSlide>Slide 2</SwiperSlide>
       <SwiperSlide>Slide 3</SwiperSlide>
       <SwiperSlide>Slide 4</SwiperSlide>

@@ -22,6 +22,7 @@ gem 'searchkick', '~> 4.0'
 gem 'simple_form'
 gem 'rest-client'
 gem "select2-rails"
+gem "jquery-rails"
 gem 'cloudinary', '~> 1.16.0'
 gem 'dotenv-rails', groups: [:development, :test]
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
