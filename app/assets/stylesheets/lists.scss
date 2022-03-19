@@ -42,7 +42,7 @@ p{
 
 .hb-container{
   h1{
-    font-family: q-font;
+    font-family: 'Rubik', sans-serif;
   }
 }
 
@@ -76,12 +76,10 @@ h3{
     object-fit: cover;
     filter: gray; /* IE5+ */
     -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: all .2s ease-in-out;  
   }
   img:hover {
     filter: none;
       -webkit-filter: grayscale(0);
-      -webkit-transform: scale(1.03);
 
     }
 }
@@ -96,7 +94,7 @@ h3{
 
 .white-text{
   color: white;
-  font-family: q-font;
+  font-family: 'Rubik', sans-serif;
   text-decoration: none;
 }
 
@@ -144,19 +142,5 @@ p{
   align-items: center;
 }
 
-.footer{
-  background:rgb(255, 255, 255);
-  h1{
-    font-family: myfont;
-    font-size: 100px;
-    margin-top: 100px;
-    margin-bottom: 0px;
-    @media screen and (max-width: 767px) {
-      font-family: myfont;
-    font-size: 36px;
-    margin-top: 100px;
-    margin-bottom: 0px;
-    }
-  }
-}
+
 
