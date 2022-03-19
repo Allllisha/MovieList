@@ -12,11 +12,11 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "New List", new_list_path(@lists), class: "nav-link mr-3 btn btn-outline-dark"%>
+            <%= link_to "New List", new_list_path(@lists), class: "newlist"%>
           </li>
           
           <li class="nav-item">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link mr-1 btn btn-outline-dark"%>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "logout"%>
           </li>
           <li class="nav-item dropdown">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

@@ -1,3 +1,26 @@
-// Place all the styles related to the bookmarks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.form-container{
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn{
+    color: white;
+    margin-top: 20px;
+  }
+
+  .form-control{
+    width: 500px !important;
+   }
+
+   @media screen and (max-width: 767px) {
+    .form-control{
+      width: 400px !important;
+     }
+  }
+
+}
+

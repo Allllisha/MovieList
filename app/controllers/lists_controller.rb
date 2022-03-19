@@ -1,12 +1,13 @@
 class ListsController < ApplicationController
 
   def index 
-    @lists = List.all();
+    @lists = List.all;
     @favlists = List.where('name LIKE ?', 'My%').all
   end
 
   def show
     @list = List.find(params[:id])
+    @movies = Movie.all
     @bookmark = Bookmark.new
     @review = Review.new
     @reviews = @list.reviews

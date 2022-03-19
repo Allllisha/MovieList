@@ -12,7 +12,7 @@ require("jquery")
 import 'bootstrap';
 require('./hello_react.jsx')
 require('./stylesheets/hello_react.css')
-
+import Glide from '@glidejs/glide'
 
 
 
@@ -21,9 +21,27 @@ require('./stylesheets/hello_react.css')
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 
+
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
+  var sliders = document.querySelectorAll('.glide');
+  for (var i = 0; i < sliders.length; i++) {
+    var glide = new Glide(sliders[i], {
+      type: "carousel",
+      perView: 1,
+      autoplay: 5000
+    });
+    glide.mount()
+  }
+  var sliders2 = document.querySelectorAll('.glide2');
+  for (var i = 0; i < sliders2.length; i++) {
+    var glide = new Glide(sliders2[i], {
+      type: "carousel",
+      perView: 4,
+    });
+    glide.mount()
+  }
 });
 
 
