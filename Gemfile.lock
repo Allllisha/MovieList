@@ -167,6 +167,8 @@ GEM
     orm_adapter (0.5.0)
     pg (1.2.3)
     puma (3.12.6)
+    pundit (2.2.0)
+      activesupport (>= 3.0.0)
     racc (1.6.0)
     rack (2.2.3)
     rack-proxy (0.7.2)
@@ -297,6 +299,9 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.1)
+    will_paginate-bootstrap4 (0.2.2)
+      will_paginate (~> 3.0, >= 3.0.0)
     zeitwerk (2.5.3)
 
 PLATFORMS
@@ -310,13 +315,13 @@ DEPENDENCIES
   cloudinary (~> 1.16.0)
   devise
   dotenv-rails
-  elasticsearch (< 7.14)
   font-awesome-sass (~> 5.15)
   jbuilder (~> 2.7)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
+  pundit
   rails (~> 6.0.0)
   rails-controller-testing
   react-rails
@@ -332,6 +337,8 @@ DEPENDENCIES
   tzinfo-data
   web-console (>= 3.3.0)
   webpacker (~> 4.0)
+  will_paginate
+  will_paginate-bootstrap4
 
 RUBY VERSION
    ruby 2.7.4p191

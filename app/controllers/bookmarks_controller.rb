@@ -4,13 +4,15 @@ class BookmarksController < ApplicationController
 
   def new
     @bookmark = Bookmark.new
+    authorize @bookmark
   end
 
   def create
     @bookmark = Bookmark.new(bookmark_params)
     @list = List.find(params[:list_id])
     @bookmark.list = @list
-    if @bookmark.save
+    authorize @bookmark
+    if @bookmark.save!
       redirect_to @list
     else 
       render "new"
@@ -21,6 +23,7 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.find(params[:id])
     @bookmark.delete
     redirect_to @bookmark.list
+    authorize @bookmark
   end
 
   private

@@ -1,7 +1,9 @@
 <div class = "home-banner">
 <div class = "hb-container">
-<h1>Your Movie list</h1>
+ <% if user_signed_in? %>
+<h1><%= current_user.first_name %>'s Movie list</h1>
 </div>
+<% end %>
 </div>
 
 

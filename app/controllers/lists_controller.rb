@@ -1,8 +1,10 @@
 class ListsController < ApplicationController
+  skip_after_action :verify_authorized, only: %i[show]
+  skip_before_action :authenticate_user!, only: %i[show]
+
 
   def index 
-    @lists = List.all;
-    @favlists = List.where('name LIKE ?', 'My%').all
+    @lists = policy_scope(List).where(user: current_user)
   end
 
   def show
@@ -11,16 +13,24 @@ class ListsController < ApplicationController
     @bookmark = Bookmark.new
     @review = Review.new
     @reviews = @list.reviews
+    authorize @list
   end
 
   def new
     @list = List.new
+    @list.user = current_user
+    authorize @list
   end
 
   def create
     @list = List.new(list_params)
-    @list.save
-    redirect_to list_path(@list)
+    @list.user = current_user
+    authorize @list
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      render :new
+    end
   end
 
   def edit

@@ -2,12 +2,14 @@ class ReviewsController < ApplicationController
   before_action :find_list, except: [:destroy]
   def new
     @review = Review.new
+    authorize @review
   end
 
   def create
     @review = Review.new(review_params)
     @list = List.find(params[:list_id])
     @review.list = @list
+    authorize @review
 
     if @review.save
        redirect_to list_path(@list)
@@ -21,6 +23,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @review.destroy
     redirect_to list_path(@review.list)
+    authorize @review
   end
 
   private

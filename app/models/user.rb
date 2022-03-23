@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :lists, dependent: :destroy
-  has_many :movies, dependent: :destroy  
+  has_many :movies, through: :bookmarks  
   
   validates :first_name, :last_name, presence: true
 end

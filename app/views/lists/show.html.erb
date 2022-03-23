@@ -9,7 +9,7 @@
         <div class="movie_header">
           <%= image_tag bookmark.movie.poster_url, alt: "movie poster", class: "locandina"%>
           <h1><%= bookmark.movie.title %></h1>
-          <h4>2002, David Ayer</h4>
+          <h4><%= bookmark.movie.date[0..3]%></h4>
           <h4><%= "⭐️" * bookmark.movie.rating %></h4>
           <span class="minutes">117 min</span>
           <p class="type"> Biography, Crime, Drama</p>
@@ -33,7 +33,9 @@
 <div class ="sliders-container d-flex">
 <div class="select-movie">
 <div class="add-btn-container">
+<% if policy(@bookmark).new? %>
 <div class="add-btn"><h1><%= link_to "+", new_list_bookmark_path(@list)%></h1></div>
+<% end %>
 </div>
 </div>
   <div class="selected-movies">
@@ -60,10 +62,10 @@
 
 
   <div class="row">
-    <hr>
     <div class="col-6 part-a">
       <% @reviews.each do |review|%>
       <div class="reviews-stars">
+      <div class="mt-3">
          <div class="stars-container">
         <% 5.times do |i| %>
           <% if review.rating > i %>
@@ -72,7 +74,7 @@
             <i class="fas fa-star"></i>
           <% end %>
         <% end %>
-          </div> 
+          </div>  
          <div class="review-content"> 
          <%= review.content%>
            <div class="review-options"> 
@@ -80,7 +82,8 @@
             <%= link_to "delete", review_path(review), method: :delete %>
             </div>
          </div>
-       </div>   
+       </div>
+      </div>    
             <hr>
           <% end %>
         </div>
