@@ -15,14 +15,10 @@ gem 'rails-controller-testing', group: [ :test ]
 gem 'sass-rails', '~> 5'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.15'
-# gem 'elasticsearch', "< 7.14"
-gem 'tmdb-api'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 gem 'devise'
 gem 'pundit'
-gem 'react-rails'
-gem 'searchkick', '~> 4.0'
 gem 'simple_form'
 gem 'rest-client'
 gem "select2-rails"

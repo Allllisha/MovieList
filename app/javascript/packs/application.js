@@ -10,8 +10,6 @@ require("channels")
 require("jquery")
 // app/javascript/packs/application.js
 import 'bootstrap';
-require('./hello_react.jsx')
-require('./stylesheets/hello_react.css')
 import Glide from '@glidejs/glide'
 
 
