@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_23_080315) do
+ActiveRecord::Schema.define(version: 2022_03_23_123809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 2022_03_23_080315) do
     t.text "poster_url"
     t.string "date"
     t.integer "popularity"
-    t.index ["title"], name: "index_movies_on_title", unique: true
   end
 
   create_table "reviews", force: :cascade do |t|

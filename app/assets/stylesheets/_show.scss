@@ -332,6 +332,15 @@ font-family: 'Rubik', sans-serif;
         color: #959595;
         margin-left: 10px;
         font-size: 13px;
+        font-family: 'Quicksand', sans-serif;
+        font-style: italic;
+        overflow-wrap: break-word !important;
+        white-space: pre-wrap;
+        width: 50%;
+
+        i{
+          color: #959595;
+        }
       }
       .locandina{
         position: relative;

@@ -67,7 +67,20 @@
    padding-bottom: 25px;
    border-radius: 15px;
    margin-top: 50px;
+    
+   
   }
+
+  @media screen and (max-width: 768px) {
+    .icon{
+      margin-left: 150px;
+      margin-right: 150px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      border-radius: 15px;
+      margin-top: 50px;
+    }
+    }
 
  .part-1{
  background-color: #391f5e;

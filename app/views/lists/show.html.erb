@@ -11,21 +11,19 @@
           <h1><%= bookmark.movie.title %></h1>
           <h4><%= bookmark.movie.date[0..3]%></h4>
           <h4><%= "⭐️" * bookmark.movie.rating %></h4>
-          <span class="minutes">117 min</span>
-          <p class="type"> Biography, Crime, Drama</p>
+          <p class="type"><i class="fas fa-quote-left"></i><%= bookmark.comment %></p>
         </div>
         <div class="movie-description">
           <div class="overview-text"><%= bookmark.movie.overview %></div>
         </div>
         <div class="movie_social">
-          <%# <h6><i class="fas fa-quote-left"></i><%= bookmark.comment %>
         </div>
       </div>
       <div class="blur_back bright_back" style="background-image: url('<%= bookmark.movie.poster_url %>')"></div>
     </div>
   <% end %>
 
-      </ul>
+     </ul>
     </div>
   </div>
 </div>
@@ -58,7 +56,6 @@
     <h1>Movies 🎬</h1>
     <p></p>
   </div>
-  
 
 
   <div class="row">
