@@ -884,6 +884,24 @@ a:hover {
    }
 }
 
-  ///////
+  .watch-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button{
+     background-color: #b1354c;
+     border-color: #b1354c;
+     color: white;
+     border-radius: 15px;
+     padding:10px;
+     font-family: 'Rubik', sans-serif;
+
+     a{
+      color: white;
+      text-decoration: none;
+     }
+    }
+  }
 }
 
