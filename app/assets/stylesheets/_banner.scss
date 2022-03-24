@@ -7,6 +7,10 @@
   padding-top: 17vh;
   margin:0;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 767px) {
+    min-height: 40vh;
+  }
 }
 
 .form-banner {
