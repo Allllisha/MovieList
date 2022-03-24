@@ -98,7 +98,7 @@ width: 100%;
   .review-options{
     font-size: 13px;
     color: #959595;
-    font-family: 'lightfont';
+    font-family: 'Quicksand', sans-serif;
   }
 
   @media screen and (max-width: 767px) {
@@ -308,6 +308,8 @@ font-family: 'Rubik', sans-serif;
         font-family: 'Rubik', sans-serif;
         @media screen and (max-width: 767px) {
           font-size: 20px;
+          overflow-wrap: break-word !important;
+          white-space: pre-wrap;
         }
       }
       h4{
