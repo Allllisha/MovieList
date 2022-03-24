@@ -10,7 +10,7 @@ loop do
   page_number += 1
   url = "https://api.themoviedb.org/3/movie/popular?api_key=#{ENV['API_KEY']}&language=en-US&page=#{page_number.to_s}"
   
-  movies = open(url).read
+  movies = URI.open(url).read
   movie = JSON.parse(movies)
   movie_results = movie['results']
   movie_poster = "https://image.tmdb.org/t/p/w500"
