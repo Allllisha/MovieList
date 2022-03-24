@@ -19,9 +19,14 @@
 
    @media screen and (max-width: 767px) {
     .form-control{
-      width: 400px !important;
+      width: 300px !important;
      }
   }
 
 }
 
+.bookmark-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
