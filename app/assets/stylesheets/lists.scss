@@ -12,7 +12,15 @@ body{
 }
 
 .nav-link{
-  color: #000000;
+  a{
+    color: white!important;
+  } 
+}
+
+.nav-item{
+  a{
+    color: white!important;
+  }
 }
 
 
