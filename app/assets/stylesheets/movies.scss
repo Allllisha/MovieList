@@ -276,14 +276,13 @@ li {
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 767px) {
-    .form-control{
-      width: 300px;
-    }
-  }
 
   .form-control{
     width: 500px;
+
+    @media screen and (max-width: 767px) {
+      width: 300px;
+    }
   }
 
   .btn{
